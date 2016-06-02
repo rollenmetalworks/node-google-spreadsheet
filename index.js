@@ -145,6 +145,7 @@ var GoogleSpreadsheet = function( ss_key, auth_id, options ){
         request( {
           url: url,
           method: method,
+          timeout: 50000,
           headers: headers,
           body: method == 'POST' || method == 'PUT' ? query_or_data : null
         }, function(err, response, body){
